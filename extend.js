@@ -1,5 +1,6 @@
 // Extend function is included in most JS libraries/frameworks and is almost
 // the exact same as factories but allows for multiple inheritance.
+// Composition over inheritance.
 
 var _ = require('underscore');
 
@@ -23,9 +24,10 @@ function lionFactory() {
   var lion = {};
 
   // inherit
-  _.extend(lion, catFactory());
-  _.extend(lion, mammalFactory());
-  _.extend(lion, carnivoreFactory());
+  // _.extend(lion, catFactory());
+  // _.extend(lion, mammalFactory());
+  // _.extend(lion, carnivoreFactory());
+  _.extend(lion, catFactory(), mammalFactory(), carnivoreFactory());
 
   // specialize
   lion.say = function () {
