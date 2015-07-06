@@ -1,7 +1,6 @@
 // Constructor functions are also objects involves using Object.new.
 
 // ---- cat -----
-
 function Cat() {};
 
 // Adding to the prototype property of the Cat object.
@@ -17,7 +16,6 @@ Cat.prototype = {
 };
 
 // ---- lion -----
-
 function Lion() {};
 
 // inherit
